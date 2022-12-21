@@ -53,6 +53,12 @@ npm i @vitejs/plugin-vue
 Добавляем в `vite.config.js` vue. При необходимости указываем дополнительные настройки
 
 ```js
+import vue from '@vitejs/plugin-vue'
+```
+
+в `plugins`:
+
+```js
     vue({
             template: {
                 transformAssetUrls: {
