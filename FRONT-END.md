@@ -78,3 +78,15 @@ import vue from '@vitejs/plugin-vue'
             },
         }),
 ```
+
+В `tailwind.config.js` добавить путь для vue файлов
+
+```js
+module.exports = {
+    content: [
+        ...
+        './resources/js/**/*.vue',
+    ],
+    ...
+};
+```
