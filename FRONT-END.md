@@ -1,5 +1,6 @@
 # TailwindCSS и Vue 3 для Laravel
-Базовые инструкции
+
+Базовые инструкции.
 
 ## Установка
 
@@ -10,12 +11,12 @@
 * `@tailwindcss/forms`: Работа с элементами форм
 * `@tailwindcss/typography`: Работа с текстом (статьи, новости и т.п.)
 * `@tailwindcss/aspect-ratio`: Вывод видео (например, youtube) с корректным соотношением сторон
-* `@tailwindcss/line-clamp`: Обрезка текста по строкам
+* `@tailwindcss/line-clamp`: Обрезка текста по строкам (больше не используется, т.к. стал частью TailwindCSS)
 
 Установка
 
 ``
-npm install -D @tailwindcss/typography @tailwindcss/forms @tailwindcss/line-clamp @tailwindcss/aspect-ratio
+npm install -D @tailwindcss/typography @tailwindcss/forms @tailwindcss/aspect-ratio
 ``
 
 Регистрируем плагины в `tailwind.config.js`:
@@ -34,7 +35,6 @@ module.exports = {
     plugins: [
         require('@tailwindcss/typography'),
         require('@tailwindcss/forms'),
-        require('@tailwindcss/line-clamp'),
         require('@tailwindcss/aspect-ratio'),
     ],
 }
@@ -76,7 +76,7 @@ import vue from '@vitejs/plugin-vue'
                     includeAbsolute: false,
                 },
             },
-        }),
+        })
 ```
 
 В `tailwind.config.js` добавить путь для vue файлов
