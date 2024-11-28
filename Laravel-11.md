@@ -2,6 +2,8 @@
 
 ## Настройки для локальной разработки
 
+Часть настроек указывает на работу по протоколу **https в локальной среде**. 
+
 ### .env
 
 ```
@@ -74,6 +76,23 @@ MAIL_PORT=1025
         });
     }
 ```
+
+### bootstrap/app.php
+
+Если используются middleware для форматирования выходящих данных:
+
+```php
+use App\Http\Middleware\SanitizeOutput;
+
+...
+
+return Application::configure(basePath: dirname(__DIR__))
+    ...
+    ->withMiddleware(function (Middleware $middleware) {
+        $middleware->append(SanitizeOutput::class);
+    })
+```
+
 
 ### vite.config.js
 
